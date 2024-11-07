@@ -1,3 +1,5 @@
+import pytest
+
 from pytest_demo import math_numbers
 
 def test_add():
@@ -9,6 +11,7 @@ def test_subtract():
 def test_multiply():
     assert math_numbers.multiply(2, 3) == 6
 
+@pytest.mark.slow
 def test_calculate_total():
     items = [10, 20, 30, 40]
     assert math_numbers.calculate_total(items) == 100
